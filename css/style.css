@@ -1,0 +1,1059 @@
+body {
+	font-family: Helvetica;
+}
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	/*outline: 2px solid red;*/ 
+}
+img {
+	max-width: 100%;
+}
+strong {
+	font-weight: bolder;
+}
+
+/*** Classes génériques pour le positionnement en flexbox*/
+ .block {
+	 display: block;
+ }
+.flex {
+	display: flex;
+}
+.flex > * {
+	padding: 1rem;
+}
+.flex1 { flex: 1; }
+.flex2 { flex: 2; }
+.flex3 { flex: 3; }
+.flex4 { flex: 4; }
+.flex5 { flex: 5; }
+.flex6 { flex: 6; }
+.flex7 { flex: 7; }
+.flex8 { flex: 8; }
+.flex9 { flex: 9; }
+.flex10 { flex: 10; }
+
+.flex-justify-center {
+	justify-content: center;
+}
+
+.flex-align-center {
+	align-items: center;
+}
+.flex-align-start {
+	align-items: flex-start;
+}
+/* header nav > .container > * {
+	border: medium solid red;
+} */
+/* options de couleurs de sections : blanches et grises*/
+.whitesection {
+	background-color: white;
+}
+.greysection {
+	background-color:#f5f5f5;
+}
+header {
+	/*necessaire pour la position de l'auteure*/
+	position: relative;	
+}
+
+header nav > .container {
+	/* border: medium solid green; */
+	min-height: 10rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header nav li {
+	margin: 0 0.2rem;
+}
+/*header nav img {
+	margin-right:250px;
+}*/
+
+header nav a {
+	color: #cccccc;
+	text-decoration: none;
+	display: block;
+    padding: 1.5rem;
+}
+/*option supplementaire pour une mise en lumière de menu*/
+header nav a:hover,
+header nav a.isActive {
+	color: black;
+	/*text-shadow: 3px 3px 3px black;*/ 
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    /*background-color: rgba(255, 255, 255, 0.04);*/
+    border-radius: 3rem 3rem;
+    transition: 200ms;
+}
+
+.cadre {
+	background-image: url(../assets/hero-tour.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top left;
+	text-align: center;
+	color: white;
+					
+}
+/*C'est mieux d'utilser rem*/
+/**Style pour le cadre*/
+.cadre h1 {
+	padding: 8rem 1.5rem 0rem 1.5rem;
+	/*margin-top: 8rem;*/
+	font-size: 2rem;
+	letter-spacing: 0.1rem;
+	line-height: 1.2;
+}
+.cadre h1::before{
+	content: "";
+	background-color: white;
+	width: 33%;
+	display: block;
+	height: 0.3rem;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+		
+}
+
+.cadre p {
+	margin: 0 auto;
+	width: 100%;
+	font-family: 'Times New Roman', Times, serif;
+	font-style: italic;
+	font-size: 1.68rem;
+	padding: 2.2rem 0rem 5.8rem 0rem;
+}
+/*Les deux boutons en hover pour les distinguer des autres boutons*/
+.bouton {
+	display: inline-block;
+	border-radius: 3rem 3rem;
+	text-align: center;
+	font-size: 1em;
+	padding: 1.8rem 2.4rem;
+	background: transparent;
+	border: none;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;		
+}
+.bouton:hover {
+	transition: 200ms;
+	background: rgba(255, 255, 255, 0.2);
+}
+.bouton.bouton-principal {
+	padding: 1.8rem 4.4rem;
+	background: #fff186;
+	color: black;
+}
+
+.bouton.bouton-principal:hover {
+	background: #dfd166;
+	color: black;
+}
+#boutons {
+	padding-bottom: 10rem;
+}
+
+p.auteur {
+	position: absolute;
+	bottom: 1rem;
+	right: 2rem;
+	font-family: Helvetica, sans-serif;
+	font-style: initial;
+	font-weight: normal;
+	font-size: 0.9rem;
+	letter-spacing: 0.1rem;
+	line-height: 1.8;
+	text-align: right;
+	margin: 0;
+	padding-right: 1rem;
+	border-right: 0.1rem solid #96918d;
+	color: #cacaca;
+	margin: 0 auto;
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+}
+p.auteur > strong {
+	color: white;
+	font-weight: bold;
+}
+/*** Styles pour le bloc "partenaires"*/
+
+#partenaires {
+	background-color: #f5f5f5;		
+}
+#partenaires p {
+	color: ababab;
+	opacity: 0.3;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+/* Ajuster l'opacity pour suivre la maquette*/
+#partenaires img{
+	opacity: 0.3;
+	width: 100%;
+}
+#partenaires a {
+	border: 0rem;
+	padding: 3rem 0rem;
+	margin: 0 auto;		
+}
+/** Style pour le 1er slider*/
+
+#stunning-design h1 {
+
+	padding: 6rem 1.5rem 0rem 1.5rem;
+	font-size: 2rem;
+	letter-spacing: 2px;
+	line-height: 1.2;
+	text-align: center;
+}
+#stunning-design h1::after{
+	content: "";
+	background-color: black;
+	width: 33%;
+	display: block;
+	height: 0.2rem;
+	margin: 0 auto;
+	margin-top: 2rem;		
+}
+/*Choisir <article> permet de suivre le coupage des paragraphes
+en lignes*/
+#stunning-design article {
+	
+	font-family: 'Times New Roman', Times, serif;
+	color: #8f8f8f;
+	font-size: 1.2rem;
+	line-height: 2.2rem;
+	text-align: center;
+	justify-content: center;
+	margin: 2.2rem 0 5.8rem 0;
+}
+
+#stunning-design .slider img {
+	
+	opacity:1.5;
+	width: 100%;
+}
+#slider-start {
+	position: relative;
+	width: 960px;
+	height: 616px;
+	margin-top: 0rem;
+	background-image: url(../assets/large-cinema-display.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+#slider-start > .slider_container {
+	margin: 0 auto;
+	width: calc((884 * 100%) / 960);
+	height: calc((497 * 100%) / 616);
+	padding-top: calc((25 * 100%) / 616);
+}
+
+.right-arrow, .left-arrow {
+	position: absolute;
+	top: 45%;
+}
+.right-arrow { right: -2rem; }
+.left-arrow { left: -2rem; }
+/** style pour platform*/
+#platform h1 {
+
+	padding: 6rem 1.5rem 0rem 1.5rem;
+	font-size: 2rem;
+	letter-spacing: 2px;
+	line-height: 1.2;
+	text-align: center;
+}
+#platform h1::after{
+	content: "";
+	background-color: black;
+	width: 33%;
+	display: block;
+	height: 0.2rem;
+	margin: 0 auto;
+	margin-top: 2rem;		
+}
+/**text-align est centré pour 1er ligne et non pour 
+2eme*/
+
+#platform article {
+	margin: 2.2rem 5rem 6.5rem 5rem;
+	font-family: 'Times New Roman', Times, serif;
+	color: #8f8f8f;
+	font-size: 1.2rem;
+	line-height: 2.2rem;
+	text-align: center;
+}
+#platform article p {
+	margin: 0 auto;
+	font-family: 'Times New Roman', Times, serif;
+	width: 100%;
+	margin-left: 4.4rem;
+	text-align: left;
+	line-height: 2.2rem;
+	font-size: 1.2rem;
+}
+#platform img {
+	margin: 0 auto;
+	width: 100%;
+}
+/**style pour layoutrngine*/
+#layoutengine h1 {
+
+	padding: 6rem 1.5rem 0rem 0rem;
+	font-size: 2rem;
+	letter-spacing: 2px;
+	line-height: 1.2;
+	text-align: left;
+}
+
+#layoutengine h1::after{
+	content: "";
+	background-color: black;
+	width: 50%;
+	display: block;
+	height: 0.2rem;
+	margin: 0 auto;
+	margin-top: 2rem;
+	margin-left: 0rem;	
+	
+}
+#layoutengine article {
+	margin: 0 auto;
+	width: 100%;
+	padding-top: 2rem;
+	padding-bottom: 5rem;
+	font-family: 'Times New Roman', Times, serif;
+	color: #8f8f8f;
+	font-size: 1.2rem;
+	line-height: 2.2rem;
+	text-align: left;
+}
+#layoutengine img {
+	
+	margin: 0rem 0rem 8rem 0rem;
+	width: 100%;	 
+}
+/**style pour creativegalleries*/
+#creativegalleries h1 {
+
+	padding: 5rem 0rem 0rem 0rem;
+	font-size: 2rem;
+	letter-spacing: 2px;
+	line-height: 1.2;
+	text-align: left;
+}
+#creativegalleries h1::after{
+	content: "";
+	background-color: black;
+	width: 33%;
+	display: block;
+	height: 0.2rem;
+	margin: 0 auto;
+	margin-top: 2rem;
+	margin-left: 0rem;	
+	
+}
+#creativegalleries article {
+	margin: 0 auto;
+	width: 100%;
+	padding-top: 2rem;
+	padding-bottom: 5rem;
+	font-family: 'Times New Roman', Times, serif;
+	color: #8f8f8f;
+	font-size: 1.2rem;
+	line-height: 2.2rem;
+	text-align: left;
+}
+#creativegalleries img {
+	
+	margin: 0rem 0rem 6rem 0rem;
+	width: 100%;	 
+}
+/** style pour 2eme slider*/
+#artblogging h1 {
+
+	padding: 6rem 1.5rem 0rem 0rem;
+	font-size: 2rem;
+	letter-spacing: 2px;
+	line-height: 1.2;
+	text-align: left;
+}
+
+#artblogging h1::after{
+
+	content: "";
+	background-color: black;
+	width: 38%;
+	display: block;
+	height: 0.2rem;
+	margin: 0 auto;
+	margin-top: 2rem;
+	margin-left: 0rem;	
+
+}
+
+#artblogging article {
+
+	margin: 0 auto;
+	width: 100%;
+	padding-top: 2rem;
+	padding-bottom: 5rem;
+	font-family: 'Times New Roman', Times, serif;
+	color: #8f8f8f;
+	font-size: 1.2rem;
+	line-height: 2.2rem;
+	text-align: left;
+}
+
+#artblogging img { width: 100%;	}
+
+#slider-blog { position: relative; }
+/** encadrer le slider : head et foot*/
+.sliderhead {
+
+	background-image: url(../assets/sqsp-browser-yourbrand.png);
+	background-repeat: no-repeat;
+	height: 2.5rem;
+	
+}
+
+.sliderfoot {
+	background-image: url(../assets/sqsp2-browser-yourbrand.png);
+	background-repeat: no-repeat;
+	height: 1rem;
+}
+#commentsliderblog {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin-left:0.5rem;
+	font-style: italic;
+	color: #8f8f8f;
+}
+
+/**style pour referenceblogging */
+#referenceblogging {
+	 margin: 0 auto;
+	
+	 }
+
+
+#referenceblogging h2  {
+	
+	margin: 0 auto;
+	font-size: 1.2rem;
+	padding-bottom: 1rem;
+	font-weight: bolder;
+	justify-content: space-between;
+	align-items: center;
+	color: black;
+}
+#referenceblogging article {
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.8rem;
+	padding-bottom: 1rem;
+	color: #8f8f8f;
+}
+#referenceblogging article p {
+	padding-bottom: 0.5rem;
+}
+
+.socialnet {
+	margin-left: -1rem;	
+	margin-right: 2rem;	
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	float: left;
+}
+
+.socialnet img {
+	height: 1.5rem;
+	width: 1.2rem;
+	padding: 0.5rem;
+}
+
+/**style pour templatestyle */
+#templatestyle h1 {
+
+	padding: 6rem 1.5rem 0rem 0rem;
+	font-size: 2.2rem;
+	letter-spacing: 2px;
+	line-height: 1.2;
+	text-align: left;
+}
+#templatestyle h1::after{
+	content: "";
+	background-color: black;
+	width: 45%;
+	display: block;
+	height: 0.2rem;
+	margin: 0 auto;
+	margin-top: 2rem;
+	margin-left: 0rem;	
+	
+}
+#templatestyle article {
+	margin: 0 auto;
+	width: 100%;
+	padding-top: 2rem;
+	padding-bottom: 3rem;
+	font-family: 'Times New Roman', Times, serif;
+	color: #8f8f8f;
+	font-size: 1.2rem;
+	line-height: 2.2rem;
+	text-align: left;
+}
+#templatestyle img {
+	
+	margin: 0rem 0rem 8rem 0rem;
+	width: 100%;	 
+}
+/**style pour mobilesites*/
+#mobilesites h1 {
+	font-size: 1.2rem;
+	letter-spacing: 2px;
+	line-height: 1.2;
+	text-align: left;
+	padding-top: 10rem;
+}
+#mobilesites h1::after{
+	content: "";
+	background-color: black;
+	width: 37%;
+	display: block;
+	height: 0.2rem;
+	margin: 0 auto;
+	margin-top: 2rem;
+	margin-left: 0rem;
+			
+}
+#mobilesites article {
+	font-family: 'Times New Roman', Times, serif;
+	color: #8f8f8f;
+	font-size: 1rem;
+	line-height: 2.2rem;
+	text-align: left;
+	
+}
+#mobilesites p img {
+	padding-top: 2rem;
+}
+
+#imagetourmobile {
+	padding-top: 3rem;
+}
+/** style pour socialnetworking*/
+#socialnetworking h1 {
+
+	padding: 6rem 1.5rem 0rem 0rem;
+	font-size: 2.2rem;
+	letter-spacing: 2px;
+	line-height: 1.2;
+	text-align: left;
+}
+#socialnetworking h1::after{
+	content: "";
+	background-color: black;
+	width: 45%;
+	display: block;
+	height: 0.2rem;
+	margin: 0 auto;
+	margin-top: 2rem;
+	margin-left: 0rem;		
+	
+}
+#socialnetworking article {
+	margin: 0 auto;
+	width: 100%;
+	padding-top: 2rem;
+	padding-bottom: 5rem;
+	font-family: 'Times New Roman', Times, serif;
+	color: #8f8f8f;
+	font-size: 1.2rem;
+	line-height: 2.2rem;
+	text-align: left;
+}
+#socialnetworking img {
+	
+	margin: 0rem 0rem 5rem 0rem;
+	width: 100%;
+	padding-top: 5rem;
+	padding-right: 3rem;	 
+}
+#socialnetcomment {
+	padding-top: 7rem;
+}
+#socialnetcomment h2 {
+	font-size: 1rem;
+}
+#socialnetcomment article {
+	padding-bottom: 0.8rem;
+}
+#socialnetcomment article p {
+	font-size: 0.9rem;
+}
+/** style pour powerfulcommenting*/
+#powerfulcommenting h1 {
+	padding-top: 5rem;
+	font-size: 1.2rem;
+	letter-spacing: 2px;
+	line-height: 1.2;
+	text-align: left;
+}
+#powerfulcommenting h1::after{
+	content: "";
+	background-color: black;
+	width: 50%;
+	display: block;
+	height: 0.2rem;
+	margin: 0 auto;
+	margin-top: 2rem;
+	margin-left: 0rem;
+	margin-bottom: 1rem;
+		
+}
+#powerfulcommenting article {
+	margin: 0 auto;
+	font-family: 'Times New Roman', Times, serif;
+	color: #8f8f8f;
+	font-size: 1.2rem;
+	line-height: 2.2rem;
+	text-align: left;
+}
+#powerfulcommenting img {
+	margin-top: 2rem;
+	margin-right: 2rem;
+	margin-bottom: 2rem;
+	border-right: 1px solid #96918d;	 
+}
+/**style pour audienceinsight */
+#audienceinsight h1 {
+
+	padding: 10rem 1.5rem 0rem 0rem;
+	margin-top: 1rem;
+	font-size: 1.6rem;
+	letter-spacing: 2px;
+	line-height: 1.2;
+	text-align: left;
+}
+#audienceinsight h1::after{
+	content: "";
+	background-color: black;
+	width: 33%;
+	display: block;
+	height: 0.2rem;
+	margin: 0 auto;
+	margin-top: 2rem;
+	margin-left: 0rem;
+		
+}
+#audienceinsight article {
+	margin: 0 auto;
+	width: 100%;
+	padding-top: 2rem;
+	padding-bottom: 5rem;
+	font-family: 'Times New Roman', Times, serif;
+	color: #8f8f8f;
+	font-size: 1.2rem;
+	line-height: 2.2rem;
+	text-align: left;
+}
+
+#imagetourstats {
+	margin: 0rem;
+	width: 100%;
+	padding-bottom: 0rem;
+}
+#audienceinsight .sliderfoot {
+	padding-bottom: 5rem;
+}
+/**style pour engines*/
+#engines h1 {
+
+	padding: 5rem 0 0rem 0rem;
+	margin-top: 1rem;
+	font-size: 1.2rem;
+	letter-spacing: 2px;
+	line-height: 1.2;
+	text-align: left;
+}
+
+#engines h1::after{
+
+	content: "";
+	background-color: black;
+	width: 60%;
+	display: block;
+	height: 0.2rem;
+	margin: 0 auto;
+	margin-top: 2rem;
+	margin-left: 0rem;	
+}
+
+#engines article {
+
+	margin: 0 auto;
+	width: 100%;
+	padding: 3rem 0 3rem 0rem;
+	font-family: 'Times New Roman', Times, serif;
+	color: #8f8f8f;
+	font-size: 1rem;
+	line-height: 2.2rem;
+	text-align: left;
+
+}
+#engines figure {
+	
+	background-color: #58cb8e;
+	border-radius: 3rem 0rem 0rem 3rem ;
+	height: 5rem;			
+}
+
+#engines figure > figcaption{
+	color: white;
+	font-size: 1rem;
+	text-align: center;
+	margin-right: 2rem;
+}
+
+#tourrobspace {
+	padding: 0.25rem 0.05rem;
+	border-radius: 15rem 15rem;
+	
+	 
+}
+
+#seomoz {
+	width: 5rem;
+	height: 1.5rem;
+	border-left: 0.1rem solid white;
+	margin-right: 1rem;	
+	
+}
+#engines .container span{
+	font-size: 3rem;
+	line-height: 3rem;
+}
+#citationseomoz {
+	padding-top: 3rem;
+	color: #8f8f8f;
+	font-style: italic;
+	text-align: left;
+	
+}
+#citationseomoz p {
+	padding-bottom: 1rem;
+}
+#imagetourcontributors {
+	margin-top: 5rem;
+}
+.separateur {
+	background-color:#f5f5f5;
+	height: 0.3rem;
+}
+/** style pour cloudhosting*/
+#cloudhosting h1 {
+
+	padding: 6rem 0 0rem 0rem;
+	margin-top: 1rem;
+	font-size: 1.2rem;
+	letter-spacing: 2px;
+	line-height: 1.2;
+	text-align: left;
+}
+
+#cloudhosting h1::after{
+
+	content: "";
+	background-color: black;
+	width: 50%;
+	display: block;
+	height: 0.2rem;
+	margin: 0 auto;
+	margin-top: 2rem;
+	margin-left: 0rem;	
+
+}
+#cloudhosting article {
+
+	margin: 0 auto;
+	width: 100%;
+	padding-top: 2rem;
+	padding-bottom: 7rem;
+	font-family: 'Times New Roman', Times, serif;
+	color: #8f8f8f;
+	font-size: 1rem;
+	line-height: 2.2rem;
+	text-align: left;
+}
+#cloudhosting img {
+	
+	margin: 0rem 0rem 8rem 0rem;
+	width: 100%;	 
+}
+footer {
+	background-color: black;
+	width: 100%;
+	margin: 0 auto;
+	max-height: 50rem;
+}
+
+footer nav > .container {
+	min-height: 22rem;
+	justify-content: space-between;
+	align-items: center;
+}
+.ulhead {
+	color: #848484;
+	text-decoration: none;
+}
+footer nav a {
+	color: #535353;
+	text-decoration: none;	
+}
+footer nav li {
+	padding: 0 0.2rem;
+	margin-bottom: 1rem;
+	height: 0.8rem;
+}
+
+#bouton-footer {
+
+	
+	border-radius: 2rem;
+	text-align: center;
+	font-size: 1rem;
+	padding: 1rem;
+	background: #e5e5e5;
+	border: none;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;	
+}
+.trialmoyensupport{
+	margin: 0 auto;
+	
+}
+
+.trialmoyensupport article {
+	padding-top:2rem;
+	padding-left: 0rem;
+
+	font-size: 1rem;
+	color: #919191;
+}
+.trialmoyensupport article p {
+	padding-top: 2rem;
+}
+
+.trialmoyensupport img {
+	padding-top:1.5rem;
+	height: 2rem;
+}
+
+#trial14day {
+	background-image: url(../assets/hero-pricing.jpg);
+	
+}
+#trial14day h1 {
+	padding-top:7rem;
+	padding-bottom: 2rem;
+	font-size: 2.7rem;
+	letter-spacing: 2px;
+	line-height: 2.2;
+	color: white;
+	text-align: center;
+}
+#trial14day h1::before{
+	content: "";
+	background-color: white;
+	width: 33%;
+	display: block;
+	height: 0.3rem;
+	margin: 0 auto;
+	
+}
+#bouton-getstarted {
+	display: inline-block;
+	border-radius: 50px;
+	text-align: center;
+	font-size: 1em;
+	padding: 1.5rem 5rem;
+	background:#1c1c1c;
+	border: none;
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	margin: 0rem 0rem 10rem 21rem;	
+}
+#pricingoption {
+	
+	justify-content: space-between;
+	font: normal 1rem 'Open Sans', sans-serif;
+}
+
+#pricingoption ul {
+	margin: 0 auto;
+	padding: 1rem;
+	list-style: none;
+	
+	
+}
+#pricingoption ul li {
+	padding: 1.5rem 0rem 1.5rem 8rem; 
+	color: #444;
+	background-color: #f7f7f7;
+	border-bottom: 1px solid gray;
+	font-size: 0.8rem;
+	margin: 0 auto; 
+	
+}
+#pricingoption li:hover .tooltip {
+	display: block;
+}
+
+.tooltip {
+	display: none;
+	transition: opacity 400ms;
+	font: normal 1rem 'Open Sans', sans-serif;
+	max-width: 25%;
+	position: absolute;
+	background-color:#1c1c1c;
+	border-radius: 0.1rem;
+	color: #fff;
+	padding: 1rem;
+}
+
+.tooltip article {
+	margin-bottom: 0;
+	margin-left: 2rem;
+	text-align: justify;
+    text-justify: inter-word;
+	
+}
+.tooltip h3 p {
+	margin-bottom: 0.7rem;
+	
+}
+.tooltip i {
+	
+	font-size: 1rem;
+	margin: 0rem 0rem 0.0.2rem 1rem 
+	
+}
+.free {
+	color: white;
+	background-color: #54ca90;
+	padding: 1rem 0.4rem;
+	border-radius: 5rem 5rem;
+}
+.lichef {
+	position: relative;
+	background-color: #191919;
+	height: 18rem;
+	margin-top: 2.4rem;
+	font-weight: bolder;		
+}
+
+
+.lichef article {
+	
+	text-align: center;
+	padding-top: 3rem;
+	
+}
+
+#mostpopular {
+	position: absolute;
+	right: -2.2rem;
+	top: -2.2rem;
+	color: white;
+	padding: 1.2rem 0.5rem;
+	border-radius: 5rem 5rem;
+	background-color: #54ca90;
+	text-align: center;
+}
+
+
+.lichef h2 {
+	font-family: Verdana, Geneva, sans-serif;
+	color: #ffffff;
+	font-size: 1.8rem;
+	
+}
+.lichef h2::after{
+
+	content: "";
+	background-color: #ffffff;
+	width: 40%;
+	display: block;
+	height: 0.15rem;
+	margin: 0 auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	text-align: center;
+	
+}
+.contentlichef {
+	color: #979797;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+.contentlichef span {
+	font-size: 4rem;
+	color: #ffffff;
+}
+sup{
+	position: relative;
+    vertical-align: 1.8rem;
+
+}
+
+.footerlichef {
+	color: #555555;
+}
+#pricingexplication article{
+
+	margin: 2rem 0rem 2rem 1rem;
+
+	
+}
+
+#pricingexplication h2 {
+	font-weight: bolder;
+	margin-bottom: 1rem;
+	font-size: 0.9rem;
+	
+}
+#pricingexplication p {
+
+	font-size: 0.79rem;
+	color: #8c8c8d;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.underline span {
+	padding-bottom: 0.25rem;
+	border-bottom: 0.15rem  solid;
+}
+.artspace {
+
+	font-weight: 700;
+	font-size: 0.84rem; 
+	
+}
+
+
